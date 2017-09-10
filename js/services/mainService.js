@@ -80,4 +80,11 @@ angular.module('devmtnTravel').service('mainSrv', function(){
 				price: 1722.12
 			},
 		]
+		this.getOnePackage = function(id) {
+			for (var i = 0; i < this.packageInfo.length; i++) {
+				if(this.packageInfo[i].id === parseInt(id)) {
+					return this.packageInfo[i];
+				}
+			}
+		}
 })
